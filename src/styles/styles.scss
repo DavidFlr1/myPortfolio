@@ -1,0 +1,98 @@
+$backgroundDark: true;
+
+// --------------------------------------  General styles  -------------------------------------- \\
+@font-face {
+  font-family: 'Graphik-Regular';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Graphik-Regular'), local('Graphik-Regular'), url('../utils/fonts/Graphik-Regular.ttf') format('ttf'),
+    url('../utils/fonts/Graphik-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Graphik-Medium';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Graphik-Medium'), local('Graphik-Medium'), url('../utils/fonts/Graphik-Medium.ttf') format('ttf'),
+    url('../utils/fonts/Graphik-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: 'Graphik-Semibold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Graphik-Semibold'), local('Graphik-Semibold'), url('../utils/fonts/Graphik-Semibold.ttf') format('ttf'),
+    url('../utils/fonts/Graphik-Semibold.woff') format('woff');
+}
+
+body {
+  max-height: 100vh;
+  max-width: 100vw;
+  margin: 0;
+  @if $backgroundDark { background: #313132 !important; } @else { background: #fff;}
+}
+
+textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {   
+  box-shadow: none;
+  border-color: gray;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+a {
+  color: currentColor;
+  // text-decoration: none !important;
+}
+
+img {
+  margin-bottom: 0;
+}
+
+// --------------------------------------  Scrollbar styles  -------------------------------------- \\
+*::-webkit-scrollbar {
+  width: 6px;     /* Vertical scroll size */
+  height: 6px;    /* Horizontal scroll size */
+}
+
+*::-webkit-scrollbar:active {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #ccc; // background scroll element
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo y agregamos una sombra cuando esté en hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cambiamos el fondo cuando esté en active */
+*::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+*::-webkit-scrollbar-track {
+  background: #e1e1e1; // background scroll container
+  background: none;
+  border-radius: 4px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+*::-webkit-scrollbar-track:hover, *::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+// --------------------------------------  Data Grid styles  -------------------------------------- \\
+.MuiDataGrid-root .MuiDataGrid-booleanCell[data-value="false"] {
+  color: #C8102E !important;
+  border: 1px solid #C8102E;
+  border-radius: 10px;
+}
+
+.MuiDataGrid-root .MuiDataGrid-booleanCell[data-value="true"] {
+  color: #00AB84 !important;
+  border: 1px solid #00AB84;
+  border-radius: 10px;
+}
