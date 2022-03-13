@@ -1,20 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../utils/theme'
-import { navbar } from '../utils/configs'
+import { cv } from '../utils/configs'
 
-import Hr from '../components/Hr'
 import Link from '../components/Link'
-import Input from '../components/Input'
-import Button from '../components/Button'
 import Section from '../components/Section'
-import Dropdown from '../components/Dropdown'
-import Checkbox from '../components/Checkbox'
 import Container from '../components/Container'
-import FileInput from '../components/FileInput'
 import Typography from '../components/Typography'
-import CollapseList from '../components/CollapseList'
-import Images from '../components/Images'
 import { Flex, Box } from '../components/Grid'
 
 import about from '../images/stock/about-me.jpeg'
@@ -72,8 +64,8 @@ const AboutSection = () => {
             <Typography tag='p'>I'm passionate for creating amazing user interfaces that either create a positive experience or solve a problem and I always do my best to find the best way to achieve that. I also enjoy supporting my team so everyone can feel good and do their best with the common goals.</Typography>
             <Typography tag='p'>I identify myself as a very extremely proactive, resilient and self-taught person who like to participate and create different projects.</Typography>
             <Flex>
-              <Link variant={'button-primary'} mb={[3,0,0]} mr={[2,3,3]} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>Contact</Link>
-              <Link variant={'button-primary-ghost'} mb={[3,0,0]} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>Download CV</Link>
+              <Link href={'/contact'} variant={'button-primary'} mb={[3,0,0]} mr={[2,3,3]} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>Contact</Link>
+              <Link href={cv} download variant={'button-primary-ghost'} mb={[3,0,0]} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>Download CV</Link>
             </Flex>
           </Box>
         </Flex>

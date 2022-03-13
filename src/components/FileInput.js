@@ -6,7 +6,7 @@ import { color, typography, layout, space, variant } from 'styled-system'
 import { FaFolderPlus, FaTrash, FaFile, FaFileAlt, FaFileImage, FaFileCsv, FaFileInvoice, FaFileVideo, FaFileAudio} from 'react-icons/fa'
 
 import Typography from './Typography'
-import { Flex, Box } from './Grid'
+import { Box } from './Grid'
 
 const Styled = styled.div`
   height: 100%;

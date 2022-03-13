@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, {useState } from 'react'
 import styled from 'styled-components'
 import css from '@styled-system/css'
 import theme from '../utils/theme'
@@ -117,29 +117,6 @@ const StyledButton = styled.button`
 
 const Button = ({ children, tag, ...props }) => {
   const [isDisable, setIsDisable] = useState(false)
-
-  useEffect(() => {
-    !sessionStorage.allowedActions && sessionStorage.setItem("allowedActions", "")
-
-    switch(props.type) {
-      case 'search':
-        setIsDisable(!sessionStorage.allowedActions.includes('0'))
-        break
-      case 'create':
-        setIsDisable(!sessionStorage.allowedActions.includes('1'))
-        break
-      case 'update':
-        setIsDisable(!sessionStorage.allowedActions.includes('2'))
-        break
-      case 'delete':
-        setIsDisable(!sessionStorage.allowedActions.includes('3'))
-        break
-      default:
-        setIsDisable(false)
-        break
-    }
-    
-  }, [])
 
   return (
     <StyledButton as={tag} {...props} disabled={isDisable}>

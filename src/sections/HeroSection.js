@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../utils/theme'
-import { navbar } from '../utils/configs'
+import { fullPortrait } from '../utils/configs'
 
-import Hr from '../components/Hr'
 import Link from '../components/Link'
-import Input from '../components/Input'
-import Button from '../components/Button'
 import Section from '../components/Section'
-import Dropdown from '../components/Dropdown'
-import Checkbox from '../components/Checkbox'
 import Container from '../components/Container'
-import FileInput from '../components/FileInput'
 import Typography from '../components/Typography'
-import CollapseList from '../components/CollapseList'
-import Images from '../components/Images'
-import { Flex, Box } from '../components/Grid'
-
-import hero from '../images/stock/background-1.jpeg'
 
 const StyledSection = styled(Section)`
   position: relative;
@@ -25,13 +14,14 @@ const StyledSection = styled(Section)`
   height: 100%;
   overflow: hidden;
   &::before {
+    display: none;
     position: absolute;
     content: '';
-    width: 70%;
+    width: 20%;
     height: 100%;
-    left: 0;
+    left: 65%;
     top: 0;
-    background: ${theme.colors.dark};
+    background: url(${fullPortrait});
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -52,12 +42,12 @@ const StyledSection = styled(Section)`
 
 const HeroSection = () => {
   return (
-    <StyledSection id='header'>
+    <StyledSection id='home'>
       <Container>
         <Typography tag='p' mb={3}>Hello</Typography>
         <Typography tag='h2' mb={3} color={theme.colors.primary}>I'm David</Typography>
         <Typography tag='h5' mb={3} >Front end web developer <br/>and designer</Typography>
-        <Link variant={'button-primary-ghost'} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>Contact</Link>
+        <Link href={'/contact'} variant={'button-primary-ghost'} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>Contact</Link>
       </Container>
     </StyledSection>
   )

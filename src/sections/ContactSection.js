@@ -1,82 +1,112 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../utils/theme'
-import { navbar } from '../utils/configs'
+import { cv } from '../utils/configs'
 
-import Hr from '../components/Hr'
 import Link from '../components/Link'
-import Input from '../components/Input'
-import Button from '../components/Button'
 import Section from '../components/Section'
-import Dropdown from '../components/Dropdown'
-import Checkbox from '../components/Checkbox'
 import Container from '../components/Container'
-import FileInput from '../components/FileInput'
 import Typography from '../components/Typography'
-import CollapseList from '../components/CollapseList'
-import Images from '../components/Images'
-import { Flex, Box } from '../components/Grid'
+import { Box } from '../components/Grid'
 
-import bg from '../images/stock/background-shape-yellow-gradiant.png'
+import { SiWhatsapp, SiGmail, SiGithub, SiLinkedin } from 'react-icons/si'
 
-const StyledSection = styled(Section)`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  overflow: hidden;
-  &::before {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: url(${bg});
-    background-size: cover;
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    opacity: 0.7;
-    z-index: -1;
+const Wrapper = styled(Box)`
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: ${theme.colors.light};
+  background: ${theme.colors.extended.gray800};
+  border: 2px solid ${theme.colors.extended.gray800};
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: ${p => p.bgColor};
   }
-  &::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    background: ${theme.colors.primary};
-    z-index: -2;
+  @media (max-width: 371px) {
+    div {
+      width: 30px;
+    }
+    p {
+      font-size: 14px;
+    }
+    svg {
+      font-size: 18px;
+    }
   }
 `
 
 const Line = styled.div`
   position: relative;
   width: ${p => p.width};
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 8px;
   &::before {
     position: absolute;
     content: '';
     width: 100%;
     height: 100$;
     top: 0;
-    left: 0;
-    border-bottom: 1px solid ${theme.colors.light};
+    border: 1px solid ${theme.colors.primary};
+    z-index: -1;
   }
 `
 
 const ContactSection = () => {
   return (
-    <StyledSection pt={'64px'} pb={'64px'}>
+    <Section >
       <Container>
-        <Typography tag='h4' mb={2}>Any project in mind?</Typography>
-        <Line width={'10%'} />
-        <Link variant={'button-light'} my={3} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>HIRE ME</Link>
+        <Typography tag='h2' mb={5} color={theme.colors.primary}>Contact Me <Line width={'190px'} /></Typography>
+
+        <Box px={0} pl={[0,5]}>
+          <Typography tag='h5' mb={0}>Where you can reach me?</Typography>
+          <Link width='100%' href={'mailto:davidricardo.flores33@gmail.com?Subject=Hi%20David%20,%20Im%20lookin%20to%20reach%20you%20from%20your%20website%20'} target={'_blank'}>
+            <Wrapper bgColor={theme.colors.secondary.red500}>
+              <Box px={0} width={'50px'} lineHeight={'0px'}>
+                <SiGmail fontSize='28px' />
+              </Box>
+              <Typography tag='p' mb={0} lineHeight={'0px'}>davidricardo.flores33@gmail.com</Typography>
+            </Wrapper>
+          </Link>
+          <Link width='100%' href={'tel:1528112365417'} target={'_blank'}>
+            <Wrapper bgColor={theme.colors.secondary.green500}>
+              <Box px={0} width={'50px'} lineHeight={'0px'}>
+                <SiWhatsapp fontSize='28px' />
+              </Box>
+              <Typography tag='p' mb={0} lineHeight={'0px'}>Mexico - 1 52 81 1236 5417</Typography>
+            </Wrapper>
+          </Link>
+
+          <Typography tag='h5' mb={0} mt={5}>Want to know more about my work?</Typography>
+          <Link width='100%' href={'https://www.linkedin.com/in/david-flores-31803b145'} target={'_blank'}>
+            <Wrapper bgColor={theme.colors.secondary.blue500}>
+              <Box px={0} width={'50px'} lineHeight={'0px'}>
+                <SiLinkedin fontSize='28px' />
+              </Box>
+              <Typography tag='p' mb={0} lineHeight={'0px'}>David Ricardo Flores Tena</Typography>
+            </Wrapper>
+          </Link>
+          <Link width='100%' href={'https://github.com/DavidFlr1'} target={'_blank'}>
+            <Wrapper bgColor={theme.colors.secondary.indigo500}>
+              <Box px={0} width={'50px'} lineHeight={'0px'}>
+                <SiGithub fontSize='28px' />
+              </Box>
+              <Typography tag='p' mb={0} lineHeight={'0px'}>DavidFlr1</Typography>
+            </Wrapper>
+          </Link>
+
+          <Typography tag='h5' mb={0} mt={5}>Download my CV</Typography>
+          <Link width='100%' href={cv} target={'_blank'} download >
+            <Wrapper bgColor={theme.colors.secondary.yellow500}>
+              <Box px={0} width={'50px'} lineHeight={'0px'}>
+                <SiGithub fontSize='28px' />
+              </Box>
+              <Typography tag='p' mb={0} lineHeight={'0px'}>David Flores</Typography>
+            </Wrapper>
+          </Link>
+        </Box>
+
       </Container>
-    </StyledSection>
+    </Section>
   )
 }
 

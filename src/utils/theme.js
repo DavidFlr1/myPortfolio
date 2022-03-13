@@ -11,7 +11,7 @@ const Colors = {
     green500: '#81D963',
     green200: '#98E080',
     yellow700: '#FFC72C',
-    yellow500: '#F9E547',
+    yellow500: '#F4B950',
     yellow200: '#FFF082',
     indigo700: '#2938A5',
     indigo500: '#485CC7',

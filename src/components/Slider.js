@@ -118,7 +118,7 @@ const SliderMultiple = ({ slides, shows, scrolls, dots, arrows, children}) => {
     <div className="use-slider">
       <StyledSlider {...settings} arrows={hideArrows}>
         {slides.map((e, i) => (
-          <Box width={['100%', null, null, 1 / 3, '36.5rem']} mb={[4, null, null, 0]}>
+          <Box width={['100%', null, null, 1 / 3, '36.5rem']} mb={[4, null, null, 0]} key={i}>
             hola
           </Box>
         ))}

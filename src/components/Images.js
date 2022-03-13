@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../utils/theme'
 import { color, typography, layout, space, variant } from 'styled-system'
 
 const Images = styled.img`

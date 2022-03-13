@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../layout/Layout'
-import { HeroSection, AboutSection, ExperienceSection, ServicesSection, ExampleSection, ContactSection } from '../sections/index'
+import { HeroSection, AboutSection, ExperienceSection, ServicesSection, HireSection } from '../sections/index'
 
 const index = () => {
   return (
@@ -9,9 +9,9 @@ const index = () => {
       <HeroSection />
       <AboutSection />
       <ExperienceSection />
-      services<br/>
-      examples<br/>
-      <ContactSection />
+      <ServicesSection />
+      {/* <ExampleSection /> */}
+      <HireSection />
     </Layout>
   )
 }

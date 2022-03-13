@@ -20,7 +20,6 @@ const Layout = ({ children }) => {
         <Footer />
 
       </MyContextProvider>
-
     </ThemeProvider>
   )
 }

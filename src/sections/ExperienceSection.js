@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import theme from '../utils/theme'
-import { navbar } from '../utils/configs'
+import { jobs, projects, courses } from '../utils/configs'
 
 import Hr from '../components/Hr'
 import Link from '../components/Link'
-import Input from '../components/Input'
-import Button from '../components/Button'
 import Section from '../components/Section'
-import Dropdown from '../components/Dropdown'
-import Checkbox from '../components/Checkbox'
 import Container from '../components/Container'
-import FileInput from '../components/FileInput'
 import Typography from '../components/Typography'
-import CollapseList from '../components/CollapseList'
-import Images from '../components/Images'
 import { Flex, Box } from '../components/Grid'
 
-import { AiOutlineEye, AiOutlineGithub, AiOutlineStop } from "react-icons/ai";
+import { AiOutlineEye, AiOutlineGithub } from "react-icons/ai";
 
 import logoOne from '../images/logos/react.png'
 import logoTwo from '../images/logos/react-native-v2.png'
@@ -44,8 +37,10 @@ const Line = styled.div`
     top: 0;
     border: 1px solid ${theme.colors.primary};
     margin-top: 2px;
+    z-index: -1;
   }
 `
+
 const StyledExperience = styled(Box)`
   background: ${theme.colors.extended.gray800};
   border: 2px solid ${theme.colors.dark};
@@ -112,7 +107,7 @@ const ExperienceSection = () => {
 
           <Flex mt={4} justifyContent='space-around' alignItems='center' >
             {tools.map((element, i) => (
-              <ImageWrapper width={'120px'}><img src={element.image} alt={element.name} /></ImageWrapper>
+              <ImageWrapper width={'120px'} key={i}><img src={element.image} alt={element.name} /></ImageWrapper>
               ))}
           </Flex>
         </>
@@ -124,7 +119,9 @@ const ExperienceSection = () => {
                 <Typography tag='h4' mb={0}>Jobs</Typography>
                 <Hr mt={2} variant='horizontal' background={theme.colors.dark} />
                 <Box px={0} overflow='auto' maxHeight='950px'>
-                  <Experience />
+                  {jobs.map((element, i) => (
+                    <Experience contents={element} key={i} />
+                  ))}
                 </Box>
               </Box>
             </Box>
@@ -133,7 +130,9 @@ const ExperienceSection = () => {
                 <Typography tag='h4' mb={0}>Projects</Typography>
                 <Hr mt={2} variant='horizontal' background={theme.colors.dark} />
                 <Box px={0} overflow='auto' maxHeight='950px'>
-                  <Experience background={theme.colors.secondary.red500}/>
+                  {projects.map((element, i) => (
+                    <Experience background={theme.colors.secondary.red500} contents={element} key={i} />
+                  ))}
                 </Box>
               </Box>
             </Box>
@@ -142,7 +141,9 @@ const ExperienceSection = () => {
                 <Typography tag='h4' mb={0}>Courses</Typography>
                 <Hr mt={2} variant='horizontal' background={theme.colors.dark} />
                 <Box px={0} overflow='auto' maxHeight='950px'>
-                  <Experience background={theme.colors.secondary.green500}/>
+                  {courses.map((element, i) => (
+                    <Experience background={theme.colors.secondary.green500} contents={element} key={i} />
+                  ))}
                 </Box>
               </Box>
             </Box>
