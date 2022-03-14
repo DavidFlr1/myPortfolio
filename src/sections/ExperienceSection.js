@@ -93,7 +93,7 @@ const ExperienceSection = () => {
         </Box>
         <Hr mt={2} mb={2} variant='horizontal' background={theme.colors.dark} />
         <Box px={0} maxHeight='200px' overflow='auto'>
-          <Typography tag='p' mb={0} dangerouslySetInnerHTML={{ __html: contents.rawDescription}}/>
+          <Typography mb={0} dangerouslySetInnerHTML={{ __html: contents.rawDescription}}/>
         </Box>
       </StyledExperience>
     )
@@ -115,18 +115,18 @@ const ExperienceSection = () => {
         <>
           <Flex mt={4} justifyContent='space-between' textAlign='center'>
             <Box px={0} pr={[0,0,3]} mt={5} width={['100%','100%',1/3]}>
-              <Box py={3} background={theme.colors.extended.gray800} borderRadius={'6px'}>
+              <Box py={3} height={['auto','auto','100%']} background={theme.colors.extended.gray800} borderRadius={'6px'}>
                 <Typography tag='h4' mb={0}>Jobs</Typography>
                 <Hr mt={2} variant='horizontal' background={theme.colors.dark} />
-                <Box px={0} overflow='auto' maxHeight='950px'>
+                <Box px={0} overflow='auto' height={['auto','auto','100%']} maxHeight='950px'>
                   {jobs.map((element, i) => (
                     <Experience contents={element} key={i} />
                   ))}
                 </Box>
               </Box>
             </Box>
-            <Box px={[0,0,3]} mt={[5,5,0]} width={['100%','100%',1/3]}>
-              <Box py={3} background={theme.colors.extended.gray800} borderRadius={'6px'}>
+            <Box px={[0,0,3]} mt={[5,5,0]} mb={[0,0,5]} width={['100%','100%',1/3]}>
+              <Box py={3} height={['auto','auto','100%']} background={theme.colors.extended.gray800} borderRadius={'6px'}>
                 <Typography tag='h4' mb={0}>Projects</Typography>
                 <Hr mt={2} variant='horizontal' background={theme.colors.dark} />
                 <Box px={0} overflow='auto' maxHeight='950px'>
@@ -137,7 +137,7 @@ const ExperienceSection = () => {
               </Box>
             </Box>
             <Box px={0} pl={[0,0,3]} mt={5} width={['100%','100%',1/3]}>
-              <Box py={3} background={theme.colors.extended.gray800} borderRadius={'6px'}>
+              <Box py={3} height={['auto','auto','100%']} background={theme.colors.extended.gray800} borderRadius={'6px'}>
                 <Typography tag='h4' mb={0}>Courses</Typography>
                 <Hr mt={2} variant='horizontal' background={theme.colors.dark} />
                 <Box px={0} overflow='auto' maxHeight='950px'>

@@ -35,36 +35,93 @@ export const jobs = [
     position: 'Front End Web Developer',
     company: {
       name: 'Divelement',
-      link: '',
-      visualize: '/',
-      github: '/',
+      link: 'https://divelement.io',
+      visualize: '',
+      github: '',
     },
-    rawDescription: '<p>Front end developer</p>',
+    rawDescription: '<p>Software consulting with international clients in which I perform multiple tasks as a front end web and mobile developer, such as web design, maintenance, incorporation of functionalities, API consumption, migrations, etc. </p><p>You can also reach me at <a href={mailto:dflores@divelement.io}>dflores@divelement.io</a></p>',
+  },
+  {
+    duration: '2019 - 2021',
+    position: 'Front End and Business analyst',
+    company: {
+      name: 'Allency',
+      link: 'https://allency.com.mx',
+      visualize: '',
+      github: '',
+    },
+    rawDescription: '<p>Advertising agency where I develop custom websites incorporating APIs from different services, from eCommerce to blogs. </p>',
+  },
+  {
+    duration: '2018 - 2019',
+    position: 'QA Intern',
+    company: {
+      name: 'EPICOR',
+      link: 'https://www.epicor.com/en-us/',
+      visualize: '',
+      github: '',
+    },
+    rawDescription: '<p>Design and execution of functional test cases under the SCRUM framework for the ERP enhancement.</p>',
   },
 ]
 export const projects = [
   {
-    duration: '2021 - Current',
-    position: 'Front End Web Developer',
+    duration: 'Freelancer',
+    position: 'Web Developer',
     company: {
-      name: 'Project',
-      link: '',
-      visualize: '/',
-      github: '/',
+      name: 'Allency',
+      link: 'https://allency.com.mx',
+      visualize: '',
+      github: '',
     },
-    rawDescription: '<p>Front end developer</p>',
+    rawDescription: '<p>Design of the main website</p>',
+  },
+  {
+    duration: 'Freelancer',
+    position: 'Web Developer',
+    company: {
+      name: 'Run Santa Run',
+      link: 'https://runsantarun.mx',
+      visualize: '',
+      github: '',
+    },
+    rawDescription: '<p>Design of the landing page</p>',
+  },
+  {
+    duration: 'Freelancer',
+    position: 'Project Leader',
+    company: {
+      name: 'LionPOS',
+      link: '',
+      visualize: '',
+      github: '',
+    },
+    rawDescription: '<p>Planing and development of a Point of Sale web app for the management of restaurant</p>',
   },
 ]
 export const courses = [
   {
-    duration: '2021 - Current',
-    position: 'Front End Web Developer',
+    duration: '2022',
+    position: 'React Native',
     company: {
-      name: 'Course',
+      name: 'Codewithmosh',
+      link: 'https://codewithmosh.com/p/the-ultimate-react-native-course',
+      visualize: 'https://codewithmosh.com/p/the-ultimate-react-native-course',
+      github: '',
+    },
+    rawDescription: '<p><span style="font-family: Graphik-Medium">Serial no: cert_f8hzd7qt</span> - React Native is an open-source UI software framework that is used to develop applications for Android, iOS, Web, Windows and more, by enabling developers to use the React framework along with native platform capabilities.</p>',
+  },
+  {
+    duration: 'In progress',
+    position: 'AWS Cloud Practitioner Essentials',
+    company: {
+      name: 'AWS',
       link: '',
       visualize: '/',
       github: '/',
     },
-    rawDescription: '<p>Front end developer</p>',
+    rawDescription: '<p>Learn fundamentals of the AWS Cloud</p>',
   },
 ]
+
+// https://aws.amazon.com/es/training/digital/aws-cloud-practitioner-essentials/?cp=sec&sec=prep
