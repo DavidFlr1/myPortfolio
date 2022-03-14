@@ -24,6 +24,8 @@ import logoNive from '../images/logos/contentful.png'
 
 const ImageWrapper = styled(Box)`
   filter: brightness(0) contrast(0%);
+  user-select: none;
+  pointer-events: none;
 `
 
 const Line = styled.div`
@@ -93,7 +95,8 @@ const ExperienceSection = () => {
         </Box>
         <Hr mt={2} mb={2} variant='horizontal' background={theme.colors.dark} />
         <Box px={0} maxHeight='200px' overflow='auto'>
-          <Typography mb={0} dangerouslySetInnerHTML={{ __html: contents.rawDescription}}/>
+          {/* <Typography mb={0} dangerouslySetInnerHTML={{ __html: contents.rawDescription}}/> */}
+          <Typography tag='p' mb={0}>{contents.description}</Typography>
         </Box>
       </StyledExperience>
     )
@@ -156,6 +159,7 @@ const ExperienceSection = () => {
           <Typography tag='p' fontSize={2} color={theme.colors.extended.gray700} >HTML5 - </Typography>
           <Typography tag='p' fontSize={2} color={theme.colors.extended.gray700} >CSS3 - </Typography>
           <Typography tag='p' fontSize={2} color={theme.colors.extended.gray700} >SASS - </Typography>
+          <Typography tag='p' fontSize={2} color={theme.colors.extended.gray700} >Bootstrap - </Typography>
           <Typography tag='p' fontSize={2} color={theme.colors.extended.gray700} >RestAPI - </Typography>
           <Typography tag='p' fontSize={2} color={theme.colors.extended.gray700} >JSON - </Typography>
           <Typography tag='p' fontSize={2} color={theme.colors.extended.gray700} >React - </Typography>

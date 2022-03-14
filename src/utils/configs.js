@@ -39,7 +39,8 @@ export const jobs = [
       visualize: '',
       github: '',
     },
-    rawDescription: '<p>Software consulting with international clients in which I perform multiple tasks as a front end web and mobile developer, such as web design, maintenance, incorporation of functionalities, API consumption, migrations, etc. </p><p>You can also reach me at <a href={mailto:dflores@divelement.io}>dflores@divelement.io</a></p>',
+    description: 'Software consulting with international clients in which I perform multiple tasks as a front end web and mobile developer, attending to customer needs such as web design, maintenance, incorporation of functionalities, API consumption, migrations, optimization, etc. You can also reach me at dflores@divelement.io',
+    rawDescription: '<p>Software consulting with international clients in which I perform multiple tasks as a front end web and mobile developer, attending to customer needs such as web design, maintenance, incorporation of functionalities, API consumption, migrations, optimization, etc. </p><p>You can also reach me at <a href="mailto:dflores@divelement.io">dflores@divelement.io</a></p>',
   },
   {
     duration: '2019 - 2021',
@@ -50,7 +51,8 @@ export const jobs = [
       visualize: '',
       github: '',
     },
-    rawDescription: '<p>Advertising agency where I develop custom websites incorporating APIs from different services, from eCommerce to blogs. </p>',
+    description: 'Advertising agency where I designed custom websites for customers, incorporating APIs from different services to create sites like landing pages, eCommerce and blogs.',
+    rawDescription: '<p>Advertising agency where I designed custom websites for customers, incorporating APIs from different services to create sites like landing pages, eCommerce and blogs. </p>',
   },
   {
     duration: '2018 - 2019',
@@ -61,6 +63,7 @@ export const jobs = [
       visualize: '',
       github: '',
     },
+    description: 'Design and execution of functional test cases under the SCRUM framework for the ERP enhancement.',
     rawDescription: '<p>Design and execution of functional test cases under the SCRUM framework for the ERP enhancement.</p>',
   },
 ]
@@ -74,6 +77,7 @@ export const projects = [
       visualize: '',
       github: '',
     },
+    description: 'Design of the main website',
     rawDescription: '<p>Design of the main website</p>',
   },
   {
@@ -85,6 +89,7 @@ export const projects = [
       visualize: '',
       github: '',
     },
+    description: 'Design of the landing page',
     rawDescription: '<p>Design of the landing page</p>',
   },
   {
@@ -96,6 +101,7 @@ export const projects = [
       visualize: '',
       github: '',
     },
+    description: 'Planing and development of a Point of Sale web app for the management of restaurant',
     rawDescription: '<p>Planing and development of a Point of Sale web app for the management of restaurant</p>',
   },
 ]
@@ -109,6 +115,7 @@ export const courses = [
       visualize: 'https://codewithmosh.com/p/the-ultimate-react-native-course',
       github: '',
     },
+    description: 'Serial no: cert_f8hzd7qt  -  React Native is an open-source UI software framework that is used to develop applications for Android, iOS, Web, Windows and more, by enabling developers to use the React framework along with native platform capabilities.',
     rawDescription: '<p><span style="font-family: Graphik-Medium">Serial no: cert_f8hzd7qt</span> - React Native is an open-source UI software framework that is used to develop applications for Android, iOS, Web, Windows and more, by enabling developers to use the React framework along with native platform capabilities.</p>',
   },
   {
@@ -120,6 +127,7 @@ export const courses = [
       visualize: '/',
       github: '/',
     },
+    description: 'Learn fundamentals of the AWS Cloud',
     rawDescription: '<p>Learn fundamentals of the AWS Cloud</p>',
   },
 ]
