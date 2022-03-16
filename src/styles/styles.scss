@@ -96,3 +96,68 @@ img {
   border: 1px solid #00AB84;
   border-radius: 10px;
 }
+
+// -------------------------------------------  Header  ------------------------------------------- \\
+
+.affix {
+  @media (min-width: 1060px) {
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+
+    z-index: 9999;
+    -webkit-animation: slideDown 0.2s ease-in-out;
+    -o-animation: slideDown 0.2s ease-in-out;
+    animation: slideDown 0.2s ease-in-out;
+  }
+}
+
+.non-sticky {
+  @media (min-width: 1060px) {
+    position: relative !important;
+    top: 0;
+    width: 100%;
+
+    z-index: 9999;
+    -webkit-animation: slideDown 0.2s ease-in-out;
+    -o-animation: slideDown 0.2s ease-in-out;
+    animation: slideDown 0.2s ease-in-out;
+  }
+}
+
+@-webkit-keyframes slideDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-o-keyframes slideDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}

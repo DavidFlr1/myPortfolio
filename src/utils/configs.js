@@ -1,5 +1,5 @@
 import icv from '../static/David-Ricardo-Flores-Tena-CV-2021.pdf'
-import ifullPortrait from '../images/stock/about-me.jpeg'
+import ifullPortrait from '../images/stock/david-bodypicture.png'
 import ismallPortrait from '../images/stock/about-me.jpeg'
 
 export const cv = icv
@@ -39,7 +39,7 @@ export const jobs = [
       visualize: '',
       github: '',
     },
-    description: 'Software consulting with international clients in which I perform multiple tasks as a front end web and mobile developer, attending to customer needs such as web design, maintenance, incorporation of functionalities, API consumption, migrations, optimization, etc. You can also reach me at dflores@divelement.io',
+    description: 'Software consulting with international clients in which I perform multiple tasks as a front end web and mobile developer, attending to customer needs such as web design, maintenance, incorporation of functionalities, API consumption, migrations, optimization, etc.',
     rawDescription: '<p>Software consulting with international clients in which I perform multiple tasks as a front end web and mobile developer, attending to customer needs such as web design, maintenance, incorporation of functionalities, API consumption, migrations, optimization, etc. </p><p>You can also reach me at <a href="mailto:dflores@divelement.io">dflores@divelement.io</a></p>',
   },
   {

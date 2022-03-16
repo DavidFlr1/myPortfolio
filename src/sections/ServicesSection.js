@@ -32,13 +32,16 @@ const Line = styled.div`
 
 const Service = styled(Box)`
   position: relative;
-  border: 2px solid ${theme.colors.dark};
   border-radius: 10px;
   height: 100%;
   transition: all 0.3s ease-in-out;
   cursor: default;
   overflow: hidden;
   z-index: 1;
+  &:hover {
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.5);
+    transform: scale(1.02);
+  }
   &::before {
     position: absolute;
     content: '';

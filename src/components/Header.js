@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import theme from '../utils/theme'
+import { fullPortrait } from '../utils/configs'
 
 import Link from './Link'
 import Typography from './Typography'
@@ -10,7 +11,6 @@ import { AiOutlineMenu, AiOutlineHome, AiOutlinePlusCircle, AiOutlineCode, AiOut
 import { IoMdClose } from 'react-icons/io'
 
 const Container = styled.header`
-  position: ${p => p.position};
   width: 100%;
   padding: 0 16px;
   background: ${theme.colors.extended.gray800};
@@ -57,6 +57,28 @@ const MobilMenu = styled(Box)`
     }
   }
 `
+
+const PortraitWrapper = styled.div`
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    border-radius: 50%;
+    background: url(${fullPortrait});
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+
+`
 const Item = styled(Box)`
   position: relative; 
   font-family: Graphik-Medium;
@@ -70,21 +92,22 @@ const Item = styled(Box)`
 const Header = () => {
   const [open, setOpen] = useState(false)
   const [left, setLeft] = useState('-150%')
-  const [position, setPosition] = useState('relative')
+  const [position, setPosition] = useState('non-sticky')
 
   useEffect(() => {
-    window.scrollY && setPosition('fixed')
+    console.log(window.scrollY)
+    window.scrollY && setPosition('affix')
     window.addEventListener('scroll', () => {
-      let activePosition = ''
+      let activeClass = ''
       if (window.scrollY > 50) {
-        activePosition = 'fixed'
-      }
-      setPosition(activePosition)
+        activeClass = 'affix'
+      } 
+      setPosition(activeClass)
     })
   }, [])
   
   return (
-    <Container position={position}>
+    <Container position={position} className={position}>
       <Box px={0} position='relative'>
         <WebWrapper>
           <Box px={0} width={['100%','30%','20%',null,'15%']} textAlign={['center','left','left']}>
@@ -106,7 +129,7 @@ const Header = () => {
           <AiOutlineMenu fontSize={'26px'} color={theme.colors.light} style={{position: 'absolute', right: '0', top: '0', margin: '14px'}} onClick={() => {setOpen(true); setLeft('-100%')}}/>
 
           <MobilMenu className={open ? 'active' : 'close'} left={left} id='mobil-menu'>
-            <Flex px={4} py={4} justifyContent='center' alignItems='center'> <Box width='140px' height='140px' background='white' borderRadius='50%'></Box></Flex>
+            <Flex px={4} py={4} justifyContent='center' alignItems='center'><Box px={1} py={1} border={`4px solid ${theme.colors.extended.gray600}`} borderRadius='50%' > <PortraitWrapper /> </Box></Flex>
             <Box px={0} mx={5} borderTop={`1px solid ${theme.colors.extended.gray600}`}>
               <Item px={0} py={2}><AiOutlineHome fontSize={'20px'} style={{position: 'relative', top: '4px', marginRight: '8px'}} /> <Link fontSize={[3]} href={'/#home'}>Home</Link> </Item>
               <Item px={0} py={2}><AiOutlinePlusCircle fontSize={'20px'} style={{position: 'relative', top: '4px', marginRight: '8px'}} /> <Link fontSize={[3]} href={'/#about'}>About Me</Link> </Item>

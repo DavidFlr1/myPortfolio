@@ -8,7 +8,7 @@ const StyledTypography = styled.p`
     ${p => p.spanStyles}
   }
   br {
-    @media (max-width: 640px) { display: none; }
+    ${p => !p.brake && `@media (max-width: 640px) { display: none; }`}
   }
   ${typography}
   ${color}

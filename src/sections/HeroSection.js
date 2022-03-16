@@ -14,15 +14,15 @@ const StyledSection = styled(Section)`
   height: 100%;
   overflow: hidden;
   &::before {
-    display: none;
     position: absolute;
     content: '';
-    width: 20%;
+    width: 300px;
     height: 100%;
-    left: 65%;
-    top: 0;
+    left: 75%;
+    top: 20%;
+    transform: translateX(-75%);
     background: url(${fullPortrait});
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
@@ -37,6 +37,8 @@ const StyledSection = styled(Section)`
     background: ${theme.colors.primary};
     z-index: -2;
   }
+  @media (max-width: 641px) { &::before { left: calc(100% - 10px); } }
+  @media (max-width: 424px) { &::before { display: none; } }
   @media (max-width: 348px) { &::after { display: none; } }
 `
 
@@ -46,7 +48,7 @@ const HeroSection = () => {
       <Container>
         <Typography tag='p' mb={3}>Hello</Typography>
         <Typography tag='h2' mb={3} color={theme.colors.primary}>I'm David</Typography>
-        <Typography tag='h5' mb={3} >Front end web developer <br/>and designer</Typography>
+        <Typography tag='h5' mb={3} brake={true}>Front end web developer <br/>and web designer</Typography>
         <Link href={'/contact'} variant={'button-primary-ghost'} fontSize={[3]} width={'140px'} fontFamily={'Graphik-Medium'}>Contact</Link>
       </Container>
     </StyledSection>
