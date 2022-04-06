@@ -72,7 +72,7 @@ const ServicesSection = () => {
   return (
     <Section background={theme.colors.extended.gray800} id='services' style={{zIndex: '-3'}}>
       <Container>
-        <Typography tag='h4'>Services <Line width={'150px'} /></Typography>
+        <Typography tag='h4'>Services <Line width={'90px'} /></Typography>
         <Typography tag='p'>From a landing page to a complex custom page with different services<br/> such a blog, an eCommerce or simple web maintenance<br/> I can provide anything you need</Typography>
 
         <Flex>

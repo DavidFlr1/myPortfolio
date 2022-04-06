@@ -74,8 +74,8 @@ export const projects = [
     company: {
       name: 'Allency',
       link: 'https://allency.com.mx',
-      visualize: '',
-      github: '',
+      visualize: 'https://nervous-pare-0aba70.netlify.app',
+      github: 'https://github.com/DavidFlr1/Allency',
     },
     description: 'Design of the main website',
     rawDescription: '<p>Design of the main website</p>',
@@ -103,6 +103,18 @@ export const projects = [
     },
     description: 'Planing and development of a Point of Sale web app for the management of restaurant',
     rawDescription: '<p>Planing and development of a Point of Sale web app for the management of restaurant</p>',
+  },
+  {
+    duration: 'Personal',
+    position: 'This portfolio',
+    company: {
+      name: 'David Flores',
+      link: 'https://www.linkedin.com/in/david-flores-31803b145/',
+      visualize: 'https://agitated-payne-fcd5ec.netlify.app',
+      github: 'https://github.com/DavidFlr1/myPortfolio',
+    },
+    description: 'Design of the main website',
+    rawDescription: '<p>Design of the main website</p>',
   },
 ]
 export const courses = [
