@@ -23,6 +23,7 @@
     "gatsby-plugin-sharp": "^4.9.1",
     "gatsby-plugin-styled-components": "^5.7.0",
     "gatsby-plugin-typography": "^4.8.0",
+    "isomorphic-fetch": "^3.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.3.1",
