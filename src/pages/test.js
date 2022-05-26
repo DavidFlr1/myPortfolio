@@ -11,10 +11,12 @@ import { Flex, Box } from '../components/Grid'
 const Test = () => {
   const [error, setError] = useState(false)
   const [value, setValue] = useState('0')
+  const [loading, setLoading] = useState(false)
 
   const validation = async () => {
     const url = new URL(`https://jsonplaceholder.typicode.com/todos/${value}`)
     let temporalError = false
+    setLoading(true)
 
     await fetch(url)
       .then(json => {
@@ -48,6 +50,7 @@ const Test = () => {
               <button onClick={() => validation()}>TEST</button>
               {error ? <Box color='red'>ERROR</Box> : <Box color='green'>SUCCESS</Box>}
             </form>
+            {loading && <Box color="yellow">LOADING</Box>}
           </Flex>
         </Box>
       </Container>
