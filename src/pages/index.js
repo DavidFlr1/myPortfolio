@@ -4,15 +4,17 @@ import Layout from '../layout/Layout'
 import { HeroSection, AboutSection, ExperienceSection, ServicesSection, HireSection } from '../sections/index'
 
 const index = () => {
+    // <Layout>
+    //   <HeroSection />
+    //   <AboutSection />
+    //   <ExperienceSection />
+    //   <ServicesSection />
+    //   <HireSection />
+    // </Layout>
   return (
-    <Layout>
-      <HeroSection />
-      <AboutSection />
-      <ExperienceSection />
-      <ServicesSection />
-      {/* <ExampleSection /> */}
-      <HireSection />
-    </Layout>
+    <>
+      MAINTENANCE
+    </>
   )
 }
 
